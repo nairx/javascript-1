@@ -27,6 +27,8 @@
 // f1()
 // console.log(a)
 
+
+// var a = 10
 var a = 10
 function f1(){
     var a = 20
@@ -39,4 +41,8 @@ function f1(){
 f1()
 console.log(a)
 
-// var a = 10
+//Employee employee = new Employee()
+
+// firstName = "John"
+// first_name = "John"
+// FirstName = "John"
