@@ -77,10 +77,14 @@ function placeOrder() {
     orderValue: total,
     totalValue: productTotal,
   };
-  console.log("Order placed successfully");
 
-  console.log(order);
+  console.log(`Order placed successfully by ${order.email}`);
+
+  order.items.forEach(item=>{
+    console.log(`${item.id}-${item.name}-${item.desc}-${item.quantity}-${item.price}-${item.price*item.quantity}`)
+  })
   
+
   console.log("product total", productTotal);
   console.log("Total order value", total);
 }
