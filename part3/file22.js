@@ -58,14 +58,14 @@ function decrement(productId) {
 const userEmail = "john@gmail.com";
 function calculateTotal() {
   let total = 0;
-  for(let item of cart) {
+  for (let item of cart) {
     productTotal = item.price * item.quantity;
     total += item.price * item.quantity;
   }
   return total;
 }
-function placeOrder(){
-  if(cart.length === 0) {
+function placeOrder() {
+  if (cart.length === 0) {
     console.log("Cart is empty");
     return;
   }
@@ -73,15 +73,26 @@ function placeOrder(){
 
   const order = {
     email: userEmail,
-    items: cart, 
+    items: cart,
     orderValue: total,
-    totalValue: productTotal
+    totalValue: productTotal,
   };
   console.log("Order placed successfully");
+
   console.log(order);
-  console.log("product total", productTotal)
+  
+  console.log("product total", productTotal);
   console.log("Total order value", total);
 }
+
+//console.log(products)
+console.log("***Flipkart***")
+products.forEach((product) => {
+  // console.log(product.id, product.name, product.desc, product.price);
+  console.log(`${product.id}-${product.name}-${product.desc}-${product.price}`);
+});
+
+console.log("--------------------------");
 addToCart(1);
 addToCart(3);
 addToCart(5);
