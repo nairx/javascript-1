@@ -17,9 +17,17 @@
 // const result = add(7, 5);
 // console.log(result)
 
-function add(...arr) {
-  let sum = arr.reduce((total, num) => total + num, 0);
+// function add(...arr) {
+//   let sum = arr.reduce((total, num) => total + num, 0);
+//   return sum;
+// }
+// const result = add(7, 5, 8, 9);
+// console.log(result);
+
+const add = (...args) => {
+  let sum = args.reduce((total, num) => total + num, 0);
   return sum;
-}
+};
 const result = add(7, 5, 8, 9);
 console.log(result);
+
