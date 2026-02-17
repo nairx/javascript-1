@@ -10,12 +10,16 @@ function getStudentInfo() {
     }, 2000);
   });
 }
-async function main() {
-  const result = await getStudentInfo();
-  console.log(result);
-  console.log("Program Completed Successfully");
+
+function displayInfo({name}){
+console.log(name)
 }
 
+async function main() {
+  const result = await getStudentInfo();
+  displayInfo(result)
+  console.log("Program Completed Successfully");
+}
 main()
 
 //getStudentInfo should return object name,email and age
