@@ -31,7 +31,7 @@ function getAttendanceInfo(id) {
 }
 async function main() {
   try {
-    const studentId = 1;
+    const studentId = 3;
     const result = await Promise.all([
       getStudentInfo(studentId),
       getAttendanceInfo(studentId),
